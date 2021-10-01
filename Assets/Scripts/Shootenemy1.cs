@@ -30,9 +30,9 @@ public class Shootenemy1 : MonoBehaviour
            _bullets = bullets; 
          Instantiate (this.prefabBullet, this.transform.position + (Vector3.forward * this.sizePrefab) ,this.transform.rotation);
             _bullets = _bullets - 1;
-        } else {
+        } /*else {
                 this.Reload ();
-        }
+        }*/
     }
 
     void Reload (){
