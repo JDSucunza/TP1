@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float speed;
+    public float speedMove;
+
+    public float speedRotation;
     
     // Start is called before the first frame update
     void Start()
@@ -15,11 +17,15 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.Movement ();
+       
+       
+       this.Movement ();
     }
 
     
     void Movement (){
+         
+        
         if (Input.GetButton ("up") || Input.GetButton ("down")){
             this.MovVertical ();
         }    
@@ -33,17 +39,17 @@ public class Move : MonoBehaviour
     
     void MovVertical (){
         if (Input.GetButton ("up")){
-            this.transform.Translate (0,0, speed * Time.deltaTime);
+            this.transform.Translate (0,0, speedMove * Time.deltaTime);
         }       else {
-                    this.transform.Translate (0,0, - speed * Time.deltaTime);
+                    this.transform.Translate (0,0, - speedMove * Time.deltaTime);
                  }
     }
 
     void MovHorizontal (){
         if (Input.GetButton ("left")){
-            this.transform.Translate (- speed * Time.deltaTime, 0, 0);
+            this.transform.Rotate (0, - speedRotation * Time.deltaTime, 0);
         }       else {
-                    this.transform.Translate (speed * Time.deltaTime, 0, 0);
+                    this.transform.Rotate (0, speedRotation * Time.deltaTime, 0);
                 }
     }
 
