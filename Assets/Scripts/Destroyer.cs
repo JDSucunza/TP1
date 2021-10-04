@@ -23,9 +23,7 @@ public class Destroyer : MonoBehaviour
 
     void OnCollisionEnter (Collision c){
        
-       if (c.gameObject == GameObject.FindWithTag ("Player")){
-        
-        Destroy (c.gameObject);
-       }
+       Destroy (this.gameObject);
+       
     }
 }
