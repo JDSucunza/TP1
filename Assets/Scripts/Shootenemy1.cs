@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,11 +9,14 @@ public class Shootenemy1 : MonoBehaviour
     
     public float sizePrefab;
     
-    public int bullets;
-    private int   _bullets;
+    public float cooldown = 3f;
+    public int maxTime = 8;
+    private float _cooldown;
+    
+    
     
     void Awake (){
-        this.Reload();
+        
     }
     
     
@@ -26,17 +29,14 @@ public class Shootenemy1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (_bullets > 0){
-           _bullets = bullets; 
+         if (this._cooldown <= 0){
+            
          Instantiate (this.prefabBullet, this.transform.position + (Vector3.forward * this.sizePrefab) ,this.transform.rotation);
-            _bullets = _bullets - 1;
-        } /*else {
-                this.Reload ();
-        }*/
+         this._cooldown = Random.Range(1, this.maxTime);   
+        } else {
+               this._cooldown = this._cooldown -1 * Time.deltaTime;
+        }
     }
 
-    void Reload (){
-        _bullets = bullets;
-    }
 }
 
