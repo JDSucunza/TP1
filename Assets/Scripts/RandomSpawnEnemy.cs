@@ -37,7 +37,7 @@ public class RandomSpawnEnemy : MonoBehaviour
         EnemyManager enemyManager = manager.GetComponent <EnemyManager>();
         int randomPos = Random.Range (0, this.spot.Length);
         int randomPosE = Random.Range (0, this.enemies.Length);
-        if (enemyManager.countEnemy <= enemyMax){
+        if (enemyManager.countEnemy < enemyMax){
             enemyManager.countEnemy = enemyManager.countEnemy + 1;
             Instantiate (this.enemies[randomPosE], this.spot[randomPos].position, this.transform.rotation);
         }
