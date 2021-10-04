@@ -12,14 +12,22 @@ public class ApuntarObjetivo : MonoBehaviour
     
      void Start()
     {
-       // player = GameObject.FindGameObjectWithTag("Player");
+       
     }
 
     // Update is called once per frame
     void Update()
     {
        
-       this.transform.LookAt(player);
+       
     }
+
+   
+   // ARREGLAR!!!!!
+   void Apuntar (){
+      //GameObject player = GameObject.Find ("Player");
+      
+      this.transform.LookAt(this.player);
+   }
 
 } 
