@@ -22,11 +22,9 @@ public class Damage : MonoBehaviour
 
     void OnColiisionEnter (Collision c ){
         Vida vidaDelObjeto = c.gameObject.GetComponent <Vida>();
-        if (vidaDelObjeto.vida > damage){
-            vidaDelObjeto.vida = vidaDelObjeto.vida - damage;
-        }   else {
-            Destroy (c.gameObject);
-        }
+        
+        vidaDelObjeto.vida = vidaDelObjeto.vida - damage;
+        
     }      
                                                                
 }
