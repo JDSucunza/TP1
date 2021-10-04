@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,8 +20,8 @@ public class Vida : MonoBehaviour
     }
 
     void Morir (){
-        if (vida == 0){
-            Destroy (this.gameObject);
+        if (vida <= 0){
+            //Destroy (this.gameObject);
         }
     }
 
