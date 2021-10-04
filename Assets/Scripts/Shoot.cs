@@ -5,23 +5,27 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     
-    public GameObject prefabBullet;
-    public int bullets = 0;
+    public float tamanioPrefab;
+    public int balas;
+    public GameObject prefab;
 
-    public float sizePrefab;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject jugador;
+    public string nombreDeAccion;
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetButtonDown ("Fire1") && bullets > 0){
-           Instantiate (this.prefabBullet, this.transform.position + (Vector3.forward * this.sizePrefab) ,this.transform.rotation);
-            bullets = bullets - 1;
+        if (Input.GetButtonDown (nombreDeAccion)){
+            InvokeRepeating ("Disparo",0, 0.2f);
         }
+
+        if (Input.GetButtonUp (nombreDeAccion) || balas == 0){
+            CancelInvoke ("Disparo");
+        }
+    }
+
+    void Disparo (){
+        Instantiate (prefab, jugador.transform.position + (Vector3.forward * tamanioPrefab),jugador.transform.rotation);
+            balas = balas - 1;
     }
 }
