@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 7759479326444798772}
   - component: {fileID: 5274193373384370472}
   - component: {fileID: 1461235065}
-  - component: {fileID: 24828980}
   - component: {fileID: 7734041027745690833}
+  - component: {fileID: 9176621099821481931}
+  - component: {fileID: 1705330458}
   m_Layer: 0
   m_Name: EnemyWithMove
   m_TagString: Enemy
@@ -110,9 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 100
+  speed: 50
   player: {fileID: 0}
-  rango: 0
+  rango: 5
 --- !u!54 &1461235065
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,20 +130,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &24828980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968110236598361092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897927004599c9d4e94722c596b1d758, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 100
-  manager: {fileID: 0}
 --- !u!114 &7734041027745690833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,5 +144,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBullet: {fileID: 7653854538965744332, guid: dd28fdc43ce7c10459fed3cd52e9bb7c,
     type: 3}
-  sizePrefab: 1
-  bullets: 100
+  sizePrefab: 2
+  cooldown: 3
+  maxTime: 3
+--- !u!114 &9176621099821481931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968110236598361092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0435bb42a58aaad4a995708a972cfd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1705330458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968110236598361092}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22efcc841324c924ba0f84264a793f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedVert: 50
+  speedHor: 20
