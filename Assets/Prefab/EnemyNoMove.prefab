@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6835711514241021104}
   - component: {fileID: 3733187617963360658}
   - component: {fileID: 1906227494}
-  - component: {fileID: 445584722733548193}
   m_Layer: 0
   m_Name: EnemyNoMove
   m_TagString: Untagged
@@ -122,19 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBullet: {fileID: 7653854538965744332, guid: dd28fdc43ce7c10459fed3cd52e9bb7c,
     type: 3}
-  sizePrefab: 1
-  bullets: 50
---- !u!114 &445584722733548193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6585005155234934586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897927004599c9d4e94722c596b1d758, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 100
-  manager: {fileID: 0}
+  sizePrefab: 5
+  cooldown: 3
+  maxTime: 3
