@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1204628742207602661}
   - component: {fileID: 6886242594285283259}
   - component: {fileID: 4073719600973348807}
-  - component: {fileID: 1985910759001016229}
   - component: {fileID: 4397821281366028205}
   - component: {fileID: 8262496025091698837}
+  - component: {fileID: 612169317}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7653854538965744332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 75.73298, y: 431.32043, z: -592.02405}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,18 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93fbe0a0c5e6074caf6486979a873a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1985910759001016229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7653854538965744332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a93fbe0a0c5e6074caf6486979a873a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4397821281366028205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22efcc841324c924ba0f84264a793f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedVert: 50
+  speedVert: 100
   speedHor: 0
 --- !u!114 &8262496025091698837
 MonoBehaviour:
@@ -148,3 +136,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+--- !u!54 &612169317
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653854538965744332}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
