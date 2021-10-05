@@ -9,6 +9,7 @@ public class FollowTarget : MonoBehaviour
     public float speed = 5f;
     public GameObject player; 
     
+    public EnemyManager enemyManager;
     public float rango;
 
     private void Awake(){
