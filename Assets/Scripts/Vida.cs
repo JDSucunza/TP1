@@ -6,7 +6,10 @@ public class Vida : MonoBehaviour
 {
     
     public int vida;
+
+    private GameObject enemy;
     
+    public Transform origin;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +19,18 @@ public class Vida : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.Morir();
+        //this.Morir();
     }
 
-    void Morir (){
+    void OnCollisionEnter (Collision c){
+        Damage enemy = c.gameObject.GetComponent <Damage>();
+        this.vida = this.vida - enemy.damage;
+    }
+    
+    /*void Morir (){
         if (vida <= 0){
-            //Destroy (this.gameObject);
-        }
-    }
-
+            this.transform.position = origin.poition;
+        }*/
 }
+
+
