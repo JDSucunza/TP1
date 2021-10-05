@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5274193373384370472}
   - component: {fileID: 1461235065}
   - component: {fileID: 7734041027745690833}
-  - component: {fileID: 9176621099821481931}
   - component: {fileID: 1705330458}
   m_Layer: 0
   m_Name: EnemyWithMove
@@ -33,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4968110236598361092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 20, z: 5}
+  m_LocalScale: {x: 5, y: 14.875999, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -64,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e673e001aa61c31468bc30e2c0d31340, type: 2}
+  - {fileID: 2100000, guid: cf047ab6ee15cda4e8849a681407e21b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,18 +146,6 @@ MonoBehaviour:
   sizePrefab: 2
   cooldown: 3
   maxTime: 3
---- !u!114 &9176621099821481931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968110236598361092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0435bb42a58aaad4a995708a972cfd42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1705330458
 MonoBehaviour:
   m_ObjectHideFlags: 0
