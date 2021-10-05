@@ -6,13 +6,15 @@ public class ApuntarObjetivo : MonoBehaviour
 {
     
     
-    private Transform player;
+    public Transform player;
     
     // Start is called before the first frame update
     
      void Start()
     {
-       
+       /*if (player ==null){
+          Debug.Log ("Player is not assigned");
+       }*/
     }
 
     // Update is called once per frame
