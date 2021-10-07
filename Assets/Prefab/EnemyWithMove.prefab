@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5274193373384370472}
   - component: {fileID: 1461235065}
   - component: {fileID: 7734041027745690833}
-  - component: {fileID: 1705330458}
   m_Layer: 0
   m_Name: EnemyWithMove
   m_TagString: Enemy
@@ -104,14 +103,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4968110236598361092}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9433ace9180ea7246ac6e5a0795a5b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 50
+  speed: 80
   player: {fileID: 0}
+  enemyManager: {fileID: 0}
   rango: 5
 --- !u!54 &1461235065
 Rigidbody:
@@ -146,17 +146,3 @@ MonoBehaviour:
   sizePrefab: 2
   cooldown: 3
   maxTime: 3
---- !u!114 &1705330458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968110236598361092}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22efcc841324c924ba0f84264a793f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedVert: 50
-  speedHor: 20
