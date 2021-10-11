@@ -6,8 +6,10 @@ public class FinishLevel1 : MonoBehaviour
 {
     public GameObject player;
 
-    public GameObject bomb; 
-    public int timer;
+    public bool gano = false;
+
+     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +20,11 @@ public class FinishLevel1 : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnTriggerEnter (Collider c){
+        if (c==player){
+            gano = true;
+        }
     }
 }
