@@ -20,11 +20,11 @@ public class Damage : MonoBehaviour
         
     }
 
-    void OnColiisionEnter (Collision c ){
+    /*void OnColiisionEnter (Collision c ){
         Vida vidaDelObjeto = c.gameObject.GetComponent <Vida>();
         
         vidaDelObjeto.vida = vidaDelObjeto.vida - this.damage;
         
-    }      
+    } */     
                                                                
 }
