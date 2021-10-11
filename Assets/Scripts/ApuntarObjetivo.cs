@@ -29,7 +29,7 @@ public class ApuntarObjetivo : MonoBehaviour
    void Apuntar (){
       //GameObject player = GameObject.Find ("Player");
       
-      this.transform.LookAt(this.player);
+      this.transform.LookAt(player);
    }
 
 } 
