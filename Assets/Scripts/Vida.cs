@@ -24,6 +24,8 @@ public class Vida : MonoBehaviour
         this.Morir ();
     }
 
+    // ARREGLAR !!!
+    
     void OnCollisionEnter (Collision c){
         Damage enemy = c.gameObject.GetComponent <Damage>();
         vida = vida - enemy.damage;
