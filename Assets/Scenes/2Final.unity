@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
-  origin: {fileID: 1197379592}
+  dead: 0
 --- !u!114 &541341662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2672,7 +2672,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5dfcee2467046dc43a438b2a0e0e68f7, type: 2}
+  - {fileID: 2100000, guid: d52f027d6273fba47aee467b931dc70f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2765,7 +2765,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5dfb49a8d46988c4ab96fbac78326fc7, type: 2}
+  - {fileID: 2100000, guid: d52f027d6273fba47aee467b931dc70f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
