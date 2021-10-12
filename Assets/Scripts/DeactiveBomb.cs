@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,8 +8,7 @@ public class DeactiveBomb : MonoBehaviour
 
     public GameObject player;
     
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (player ==null){
             Debug.Log ("Player is not defined for DeactiveBomb");
@@ -23,7 +22,9 @@ public class DeactiveBomb : MonoBehaviour
     }
 
     void OnCollisionEnter (Collision c){
-        active = false;
+        
+        if (c.gameObject == player){
+            active = false;
+        }
     }
-
 }
