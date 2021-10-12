@@ -19,7 +19,9 @@ public class FinishLevel1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gano){
+            
+        }
     }
 
     void OnTriggerEnter (Collider c){
