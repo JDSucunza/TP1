@@ -13,7 +13,7 @@ public class EnemyLife : MonoBehaviour
     void Update()
     {
         
-      //this.Morir();
+      this.Morir();
     }
 
     void Morir (){
