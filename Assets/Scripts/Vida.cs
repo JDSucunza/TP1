@@ -27,7 +27,8 @@ public class Vida : MonoBehaviour
     // ARREGLAR !!!
     
     void OnCollisionEnter (Collision c){
-        if (vida != null){
+        
+        if (c.gameObject.CompareTag ("Enemy")){
         Damage enemy = c.gameObject.GetComponent <Damage>();
         vida = vida - enemy.damage;
         }
