@@ -6,6 +6,7 @@ public class FinishLevel1 : MonoBehaviour
 {
     public GameObject player;
 
+    
     public bool gano = false;
 
      
@@ -20,12 +21,12 @@ public class FinishLevel1 : MonoBehaviour
     void Update()
     {
         if (gano){
-            
+            Application.LoadLevel ("3Final");
         }
     }
 
     void OnTriggerEnter (Collider c){
-        if (c==player){
+        if (c.gameObject == player){
             gano = true;
         }
     }
