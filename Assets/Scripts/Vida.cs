@@ -33,7 +33,8 @@ public class Vida : MonoBehaviour
     
     void Morir (){
         if (vida <= 0){
-                this.dead = true;        
+                this.dead = true;
+                Destroy (gameObject);        
         }
     }
 }
