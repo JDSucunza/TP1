@@ -27,10 +27,11 @@ public class Vida : MonoBehaviour
     // ARREGLAR !!!
     
     void OnCollisionEnter (Collision c){
+        if (vida != null){
         Damage enemy = c.gameObject.GetComponent <Damage>();
         vida = vida - enemy.damage;
+        }
     }
-    
     void Morir (){
         if (vida <= 0){
                 this.dead = true;
