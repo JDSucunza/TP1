@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class FinishLevel1 : MonoBehaviour
 {
     public GameObject player;
@@ -21,12 +21,13 @@ public class FinishLevel1 : MonoBehaviour
     void Update()
     {
         if (gano){
-            Application.LoadLevel ("3Final");
+            
+            SceneManager.LoadScene("3Final");
         }
     }
 
     void OnTriggerEnter (Collider c){
-        if (c.gameObject == player){
+        if (c.CompareTag ("Player")){
             gano = true;
         }
     }
