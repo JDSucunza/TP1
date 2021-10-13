@@ -10,15 +10,15 @@ public class FollowTarget : MonoBehaviour
     public GameObject player; 
     
     public EnemyManager enemyManager;
-    public float rango;
+    
 
     private void Awake(){
         this.rb = this.GetComponent<Rigidbody>();
         
-        this.player = GameObject.FindWithTag("Player");
+        /*this.player = GameObject.FindWithTag("Player");
         if(this.player == null){
             Debug.Log("Player is null in EnemyManager");
-        }
+        }*/
         
     
     }
