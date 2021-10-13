@@ -16,9 +16,11 @@ GameObject:
   - component: {fileID: 5576092202926903037}
   - component: {fileID: 5576092202926902980}
   - component: {fileID: 5576092202926902979}
+  - component: {fileID: 1513009275}
+  - component: {fileID: 5732924795727708826}
   m_Layer: 0
   m_Name: enemigo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 5576092202926903036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8, y: 15, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -139,10 +141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 10
+  speed: 70
   player: {fileID: 0}
   enemyManager: {fileID: 0}
-  rango: 0
 --- !u!114 &5576092202926902979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,5 +159,32 @@ MonoBehaviour:
   prefabBullet: {fileID: 7653854538965744332, guid: dd28fdc43ce7c10459fed3cd52e9bb7c,
     type: 3}
   sizePrefab: 0
-  cooldown: 3
-  maxTime: 8
+  cooldown: 2
+  maxTime: 4
+--- !u!114 &1513009275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5576092202926903036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897927004599c9d4e94722c596b1d758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 100
+  manager: {fileID: 0}
+--- !u!114 &5732924795727708826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5576092202926903036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0435bb42a58aaad4a995708a972cfd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
