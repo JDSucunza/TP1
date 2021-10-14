@@ -6,11 +6,11 @@ public class lifeEnemy : MonoBehaviour
 {
    
    
-    public int vida;
+    public int vida = 200;
 
     private GameObject enemy;
-    
-    EnemyManager manager 
+
+    public GameObject  manager;     
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +34,9 @@ public class lifeEnemy : MonoBehaviour
     }
     void Morir (){
         if (vida <= 0){
+                EnemyManager enemyManager = manager.GetComponent <EnemyManager>();
+                enemyManager.dead = enemyManager.dead + 1;
+                
                 Destroy (this.gameObject);
                         
         }
