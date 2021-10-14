@@ -9,8 +9,6 @@ public class Vida : MonoBehaviour
 
     private GameObject enemy;
     
-    
-
     public bool dead = false;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +26,7 @@ public class Vida : MonoBehaviour
     
     void OnCollisionEnter (Collision c){
         
-        if (c.gameObject.CompareTag ("Enemy")){
+        if (c.gameObject.CompareTag ("Bullet")){
         Damage enemy = c.gameObject.GetComponent <Damage>();
         vida = vida - enemy.damage;
         }
@@ -36,7 +34,7 @@ public class Vida : MonoBehaviour
     void Morir (){
         if (vida <= 0){
                 this.dead = true;
-                Destroy (gameObject);        
+                        
         }
     }
 }
