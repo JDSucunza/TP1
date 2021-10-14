@@ -18,13 +18,6 @@ public class Damage : MonoBehaviour
     void Update()
     {
         
-    }
-
-    /*void OnColiisionEnter (Collision c ){
-        Vida vidaDelObjeto = c.gameObject.GetComponent <Vida>();
-        
-        vidaDelObjeto.vida = vidaDelObjeto.vida - this.damage;
-        
-    } */     
+    }    
                                                                
 }
