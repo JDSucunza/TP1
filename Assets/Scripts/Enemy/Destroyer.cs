@@ -23,7 +23,10 @@ public class Destroyer : MonoBehaviour
 
     void OnCollisionEnter (Collision c){
        
-       Destroy (this.gameObject);
+       
+           
+            Destroy (this.gameObject);
+       
        
     }
 }
