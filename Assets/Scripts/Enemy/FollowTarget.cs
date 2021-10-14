@@ -7,6 +7,8 @@ public class FollowTarget : MonoBehaviour
     public Transform target;
     private Rigidbody rb;
     public float speed = 5f;
+    
+    public float speedMax = 15f;
     public GameObject player; 
     
     public EnemyManager enemyManager;
@@ -27,8 +29,11 @@ public class FollowTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = Vector3.MoveTowards(this.transform.position, this.target.position, this.speed * Time.deltaTime);
-        this.rb.MovePosition(pos);
+        if (speed < speedMax){
+                    speed = speed + 1 * Time.deltaTime;
+        }
+                Vector3 pos = Vector3.MoveTowards(this.transform.position, this.target.position, this.speed * Time.deltaTime);
+                this.rb.MovePosition(pos);
         
     }
 }
