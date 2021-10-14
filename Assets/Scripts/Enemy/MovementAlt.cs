@@ -9,7 +9,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     public int speedV;
     
-    public bool canMove = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +21,5 @@ public class NewBehaviourScript : MonoBehaviour
         this.transform.Translate (speedH * Time.deltaTime, 0, speedV * Time.deltaTime); 
     }
 
-    void OnCollisionEnter (Collision c){
-            speedV = -speedV;
-            speedH = -speedH;
-    }
-
+    
 }
