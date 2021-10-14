@@ -23,7 +23,8 @@ public class NewBehaviourScript : MonoBehaviour
     }
 
     void OnCollisionEnter (Collision c){
-
+            speedV = -speedV;
+            speedH = -speedH;
     }
 
 }
