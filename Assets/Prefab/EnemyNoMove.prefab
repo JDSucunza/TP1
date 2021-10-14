@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6835711514241021104}
   - component: {fileID: 3733187617963360658}
   - component: {fileID: 1906227494}
+  - component: {fileID: 1985740771}
   m_Layer: 0
   m_Name: EnemyNoMove
   m_TagString: Enemy
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6585005155234934586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 5, z: 10}
+  m_LocalScale: {x: 10, y: 13.405099, z: 19.128}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -122,6 +123,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBullet: {fileID: 7653854538965744332, guid: dd28fdc43ce7c10459fed3cd52e9bb7c,
     type: 3}
-  sizePrefab: 5
+  sizePrefab: 10
   cooldown: 3
   maxTime: 3
+--- !u!114 &1985740771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585005155234934586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff5adcc5d7e7c545ade6912b6727265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 100
+  manager: {fileID: 0}
