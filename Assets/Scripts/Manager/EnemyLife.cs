@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyLife : MonoBehaviour
 {
     
-    public int life = 100;
+    public int life = 200;
     public GameObject manager;
     
    
@@ -17,7 +17,7 @@ public class EnemyLife : MonoBehaviour
     }
 
     void Morir (){
-        if (life == 0){
+        if (life <= 0){
             EnemyManager enemyManager = manager.GetComponent <EnemyManager>();
             enemyManager.dead = enemyManager.dead + 1;
             enemyManager.countEnemy = enemyManager.countEnemy - 1;
