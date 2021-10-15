@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ExtraBullets : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int bullets;
+    
+    private GameObject player;
+    
+    void Awake()
     {
         
     }
@@ -13,6 +16,17 @@ public class ExtraBullets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+    
     }
+
+    void OnTriggerEnter (Collider c){
+        if (c.gameObject.CompareTag ("Player")){
+                
+                Shoot player = c.gameObject.GetComponent <Shoot> ();
+            
+                Destroy (this.gameObject);
+                player.balas = player.balas + bullets;
+            
+        }
+    }    
 }
