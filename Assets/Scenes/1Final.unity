@@ -1761,7 +1761,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1040807970}
+  timer: 0
+  maxTime: 50
   gano: 0
+  murio: 0
 --- !u!4 &1597503473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3377507734296258757, guid: 4c5ad3b94ec834c4d8d04c81d9098b51,
@@ -2606,6 +2609,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164752775358591994, guid: 8a9790e256614e842b9840dc95f66c87,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a9790e256614e842b9840dc95f66c87, type: 3}
