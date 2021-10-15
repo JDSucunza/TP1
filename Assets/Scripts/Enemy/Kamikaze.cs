@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Kamikaze : MonoBehaviour
 {
+  
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +22,12 @@ public class Kamikaze : MonoBehaviour
 
     void OnCollisionEnter (Collision c){
        
+
+
        if (c.gameObject.CompareTag ("Player")){
-            Debug.Log ("Moriste");      
+            Vida player = c.gameObject.GetComponent <Vida> ();      
+            player.dead = true;
+            
             Destroy (this.gameObject);
        }
        
