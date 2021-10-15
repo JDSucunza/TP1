@@ -26,28 +26,27 @@ public class FinishLevel1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gano!= true && murio != true && timer < maxTime){
+        if (gano!= true && Murio () != true && timer < maxTime){
             timer = timer + (1*Time.deltaTime);
-        }else if (murio || TiempoCumplido () ){    
+        }else if (Murio() || TiempoCumplido () ){    
             
             SceneManager.LoadScene("1Final");
         } else {
             SceneManager.LoadScene ("3Final");
         }
     }
-
+    
     bool TiempoCumplido (){
         return (timer >= maxTime);
     }
     
-    void Murio (){
+    private bool Murio (){
 
-        Vida player = gameObject.GetComponent <Vida>();
-        if (player.dead){
-            murio = true;
+        Vida playerVida = player.gameObject.GetComponent <Vida>();
+            return (playerVida.dead);
         }
     
-    }
+    
 
     void Gano (){
 
