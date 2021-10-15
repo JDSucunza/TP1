@@ -5,8 +5,7 @@ using UnityEngine;
 public class Movement2 : MonoBehaviour
 {
     
-    public int speedH;
-
+    public float speedH;
     public int speedV;
     
     
@@ -23,6 +22,7 @@ public class Movement2 : MonoBehaviour
     }
 
     void OnCollisionEnter (Collision c){
+            
             speedV = -speedV;
             speedH = -speedH;
     }
