@@ -6,7 +6,7 @@ public class FinishLevel1 : MonoBehaviour
 {
     public GameObject player;
 
-    public GameObject finish;
+    public GameObject bomb;
     public float timer = 0f;
 
     public float maxTime= 500f;
@@ -26,7 +26,7 @@ public class FinishLevel1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gano!= true && Murio () != true && timer < maxTime){
+        if (Active () && Murio () != true && timer < maxTime){
             timer = timer + (1*Time.deltaTime);
         }else if (Murio() || TiempoCumplido () ){    
             
@@ -48,7 +48,8 @@ public class FinishLevel1 : MonoBehaviour
     
     
 
-    void Gano (){
-
+    private bool Active (){
+        DeactiveBomb bombActive = bomb.gameObject.GetComponent <DeactiveBomb> ();
+        return (bombActive.active);
     }
 }
