@@ -29,7 +29,7 @@ public class Manager2 : MonoBehaviour
         } else if (Termino () != true && Dead () || TiempoCumplido ()){
             SceneManager.LoadScene("2Final");
             } else {
-                    SceneManager.LoadScene("3Final");
+                    SceneManager.LoadScene("4Final");
             }
         
     }

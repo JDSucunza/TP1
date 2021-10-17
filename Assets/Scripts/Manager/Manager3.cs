@@ -21,7 +21,7 @@ public class Manager3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Termino () != true && timer < maxTime){
+        if (Termino () != true && TiempoCumplido () != true){
             timer = timer + (1 * Time.deltaTime);
         } else if (Termino ()){
             SceneManager.LoadScene("2Final");
@@ -30,6 +30,10 @@ public class Manager3 : MonoBehaviour
             }
     }
 
+    
+    private bool TiempoCumplido (){
+        return (maxTime <= timer);
+    }
     private bool Termino (){
 
         Finish esFinal = final.gameObject.GetComponent <Finish>();
