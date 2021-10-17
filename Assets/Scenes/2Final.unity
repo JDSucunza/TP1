@@ -795,15 +795,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 464239059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d5a146a6a212c4b8ddbca7365ec97d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0705433ad8eb56d448e2e20f19bcc59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1447661403}
-  finish: {fileID: 2056217458}
   timer: 0
-  maxTime: 60
-  gano: 0
-  murio: 0
+  maxTime: 70
+  final: {fileID: 2056217458}
 --- !u!4 &485017480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5976769782831882399, guid: 61c06029b05c0ed429e008723fc123b3,
@@ -3991,15 +3988,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2056217458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d5a146a6a212c4b8ddbca7365ec97d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7103a4f7eeef9704bb0e93b974e9c4fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  finish: {fileID: 0}
-  timer: 0
-  maxTime: 500
-  gano: 0
-  murio: 0
+  finish: 0
 --- !u!1 &2064412990
 GameObject:
   m_ObjectHideFlags: 0
